@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import extractRoutes from "./routes/extractRoutes.js";
-import summarizeRoutes from "./routes/summarizeRoutes.js";
 import dotenv from "dotenv";
 
 dotenv.config();
