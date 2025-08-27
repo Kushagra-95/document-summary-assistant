@@ -7,6 +7,7 @@ type Props = {
 };
 
 export default function FileUploader({ onFileSelected, accepted = ".pdf,image/*" }: Props) {
+  void accepted;
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       if (acceptedFiles?.length) onFileSelected(acceptedFiles[0]);
