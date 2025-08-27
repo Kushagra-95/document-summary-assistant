@@ -1,5 +1,4 @@
-// src/components/SummaryView.tsx
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 type Props = {
   summary: string;
@@ -28,7 +27,7 @@ export default function SummaryView({ summary, fullText }: Props) {
 
   return (
     <div className="w-full max-w-3xl mx-auto mt-6 space-y-4">
-      {/* Summary card */}
+      
       <div className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-lg font-bold text-black bg-white px-2 py-1 rounded">
@@ -45,7 +44,7 @@ export default function SummaryView({ summary, fullText }: Props) {
         <p className="mt-3 text-gray-200 whitespace-pre-line">{summary}</p>
       </div>
 
-      {/* Key points */}
+      
       {keyPoints.length > 0 && (
         <div className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
           <h4 className="text-black bg-white inline-block px-2 py-1 rounded font-bold mb-2">
@@ -59,7 +58,7 @@ export default function SummaryView({ summary, fullText }: Props) {
         </div>
       )}
 
-      {/* Full text toggle */}
+      
       {fullText && (
         <details className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
           <summary className="cursor-pointer text-black bg-white inline-block px-2 py-1 rounded font-bold">

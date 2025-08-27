@@ -1,5 +1,4 @@
-// src/components/FileUploader.tsx
-import React, { useCallback } from "react";
+import  { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
 type Props = {
@@ -40,7 +39,7 @@ export default function FileUploader({ onFileSelected, accepted = ".pdf,image/*"
     >
       <input {...getInputProps()} />
       <div className="flex flex-col items-center gap-4">
-        {/* Upload Icon */}
+        
         <div
           className={`w-16 h-16 flex items-center justify-center rounded-full border-2 transition-all duration-300
             ${isDragActive ? "border-blue-500 bg-gray-900" : "border-gray-700 bg-gray-950"}
@@ -78,7 +77,7 @@ export default function FileUploader({ onFileSelected, accepted = ".pdf,image/*"
           </svg>
         </div>
 
-        {/* Instruction Text */}
+        
         <p className="text-gray-300 font-medium text-lg text-center">
           {isDragActive ? (
             <span className="text-blue-400">Drop your file here!</span>
@@ -94,7 +93,7 @@ export default function FileUploader({ onFileSelected, accepted = ".pdf,image/*"
           )}
         </p>
 
-        {/* Supported File Info */}
+        
         <p className="text-sm text-gray-500">📄 PDF, PNG, JPG · Max 1 file</p>
       </div>
     </div>

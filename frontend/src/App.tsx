@@ -1,5 +1,4 @@
-// src/App.tsx
-import React, { useState } from "react";
+import  { useState } from "react";
 import FileUploader from "./components/FileUploader";
 import SummaryView from "./components/SummaryView";
 import { uploadAndSummarize } from "./api/api";
@@ -21,7 +20,6 @@ export default function App() {
     setFullText("");
     setError(null);
 
-    // create preview url
     if (f.type.startsWith("image/")) {
       setPreviewUrl(URL.createObjectURL(f));
     } else if (f.type === "application/pdf") {
@@ -55,7 +53,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 py-8 px-4">
-      {/* Header */}
+      
       <header className="max-w-4xl mx-auto mb-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
           📄 Document Summary Assistant
@@ -66,12 +64,12 @@ export default function App() {
         </p>
       </header>
 
-      {/* Main */}
+      
       <main className="max-w-4xl mx-auto">
-        {/* File uploader */}
+        
         <FileUploader onFileSelected={handleFile} />
 
-        {/* File preview */}
+        
         {previewUrl && (
           <div className="mt-6 bg-gray-900 p-4 rounded-xl shadow-lg">
             <h2 className="text-lg font-semibold mb-3">📌 File Preview</h2>
@@ -94,9 +92,9 @@ export default function App() {
           </div>
         )}
 
-        {/* Summary controls */}
+        
         <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          {/* Dropdown for summary length */}
+          
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium text-gray-300 mr-2">
               Summary length:
@@ -112,7 +110,7 @@ export default function App() {
             </select>
           </div>
 
-          {/* File name + submit */}
+          
           <div className="flex items-center gap-2">
             <button
               onClick={handleSubmit}
@@ -124,20 +122,20 @@ export default function App() {
           </div>
         </div>
 
-        {/* Error box */}
+       
         {error && (
           <div className="mt-4 max-w-3xl bg-red-900/50 border border-red-700 text-red-300 p-3 rounded">
             {error}
           </div>
         )}
 
-        {/* Show summary results */}
+        
         {summary ? <SummaryView summary={summary} fullText={fullText} /> : null}
       </main>
 
-      {/* Footer */}
+      
       <footer className="max-w-4xl mx-auto mt-12 text-center text-sm text-gray-500">
-        Built with ❤️ — backend at{" "}
+        Built by Kushagra Nigam
         <code className="bg-gray-800 px-1 rounded">/api/extract-and-summarize</code>
       </footer>
     </div>
