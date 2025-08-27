@@ -83,18 +83,18 @@ export default function FileUploader({ onFileSelected, accepted = ".pdf,image/*"
             <span className="text-blue-400">Drop your file here!</span>
           ) : (
             <>
-              Drag & drop a PDF or image here, or{" "}
-              <span
+              Drag & drop a PDF or image here
+              {/* <span
                 className="text-white bg-blue-600 px-2 py-1 rounded cursor-pointer transition-colors hover:bg-blue-700 hover:text-white"
               >
                 click to browse
-              </span>
+              </span> */}
             </>
           )}
         </p>
 
         
-        <p className="text-sm text-gray-500">📄 PDF, PNG, JPG · Max 1 file</p>
+        <p className="text-sm text-gray-500"> PDF, PNG, JPG · Max 1 file</p>
       </div>
     </div>
   );

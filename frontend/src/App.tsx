@@ -56,7 +56,7 @@ export default function App() {
       
       <header className="max-w-4xl mx-auto mb-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
-          📄 Document Summary Assistant
+           Document Summary Assistant
         </h1>
         <p className="mt-2 text-gray-400">
           Upload PDFs or images, then generate <strong>short</strong>,{" "}
@@ -72,7 +72,7 @@ export default function App() {
         
         {previewUrl && (
           <div className="mt-6 bg-gray-900 p-4 rounded-xl shadow-lg">
-            <h2 className="text-lg font-semibold mb-3">📌 File Preview</h2>
+            <h2 className="text-lg font-semibold mb-3"> File Preview</h2>
             {selectedFile?.type.startsWith("image/") ? (
               <img
                 src={previewUrl}
@@ -136,7 +136,7 @@ export default function App() {
       
       <footer className="max-w-4xl mx-auto mt-12 text-center text-sm text-gray-500">
         Built by Kushagra Nigam
-        <code className="bg-gray-800 px-1 rounded">/api/extract-and-summarize</code>
+        {/* <code className="bg-gray-800 px-1 rounded">/api/extract-and-summarize</code> */}
       </footer>
     </div>
   );

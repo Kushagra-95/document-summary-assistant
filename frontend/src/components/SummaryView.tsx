@@ -31,7 +31,7 @@ export default function SummaryView({ summary, fullText }: Props) {
       <div className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-lg font-bold text-black bg-white px-2 py-1 rounded">
-            📝 Summary
+             Summary
           </h3>
           <button
             onClick={() => navigator.clipboard.writeText(summary)}
@@ -48,7 +48,7 @@ export default function SummaryView({ summary, fullText }: Props) {
       {keyPoints.length > 0 && (
         <div className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
           <h4 className="text-black bg-white inline-block px-2 py-1 rounded font-bold mb-2">
-            📌 Key Points
+             Key Points
           </h4>
           <ul className="list-disc pl-5 space-y-1 text-gray-200">
             {keyPoints.map((kp, i) => (
@@ -62,7 +62,7 @@ export default function SummaryView({ summary, fullText }: Props) {
       {fullText && (
         <details className="p-4 bg-gray-900 rounded-xl shadow border border-gray-700">
           <summary className="cursor-pointer text-black bg-white inline-block px-2 py-1 rounded font-bold">
-            📄 Show Full Extracted Text
+             Show Full Extracted Text
           </summary>
           <pre className="mt-3 whitespace-pre-wrap text-sm text-gray-200 max-h-72 overflow-auto">
             {fullText}
